@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#cadastro-pet {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 auto;
+    border: 0;
+    color: #003137;
+    column-gap: 50px;
+}
+
+@media (max-width: 576px) {
+    #cadastro-pet {
+        display: inline;
+    }
+    #texto{
+        margin-bottom: 50px;
+    }
+}
+
+#cadastro-pet h1 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#texto h2 {
+    font-size: 25px;
+}
+
+#cadastro-pet h3 {
+    font-size: 16px;
+}
+
+button {
+    margin: 15px;
+}
+
+#alerta-endereço {
+    display: inline;
+    font-size: 10px; 
+}
+
+#inputImagem {
+    display: block;
+}

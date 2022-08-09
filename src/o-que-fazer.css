@@ -1,0 +1,118 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================== header ======================== */
+
+.bg-light {
+  background-color: #ecfbfd !important;
+}
+
+.texto-banner {
+  color: #003137;
+}
+
+.navbar navbar-expand-lg navbar-light bg-light {
+  background-color: #ecfbfd;
+  position: sticky;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+.navbar-expand-lg {
+  justify-content: space-between;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #003137;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #003137;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.imagem-logo {
+  width: 100px;
+}
+
+/*=====================section dicas ====================*/
+h1 {
+  font-weight: bolder;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+.pets .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.col-lg-4 p {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.rounded-circle {
+  border: 8px solid #009dae;
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+}
+
+.bd-placeholder-img {
+  width: 330px;
+  object-fit: cover;
+}
+
+/* ================== footer ===================== */
+
+.footer {
+  background-color: #064f58;
+}
+
+.primeiraFrase {
+  font-weight: bold;
+  color: rgb(252, 239, 239);
+}
+
+.segundaFrase {
+  color: rgb(252, 239, 239);
+}
+
+.listaRedesSociais {
+  list-style: none;
+}
+
+.rights p {
+  margin-bottom: 0px;
+}
+
+.footer-redes-sociais ul {
+  padding-inline-start: 0px;
+  margin-bottom: 0px;
+}
+
+#imagem-logo-footer {
+  width: 70px;
+}
+
+.footer-a {
+  padding: 0 10px;
+}
+
+@include media-breakpoint-up(sm) {
+  .footer {
+    display: flex;
+    align-items: column;
+  }
+}

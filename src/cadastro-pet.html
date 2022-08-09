@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>connect.pet</title>
+    <link rel="icon" type="image/png" href="./assets/logo-connectpet.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="cadastro-pet.css" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm p-3 mb-5 bg-white rounded justify-content-around"
+    >
+      <a class="navbar-brand" href="index.html"
+        ><img
+          class="imagem-logo"
+          src="./assets/logo-connectpet.png"
+          alt="logo connect pet"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Quem somos <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link teste" href="o-que-fazer.html">O que fazer?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ongs-parceiras.html">ONGs parceiras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#encontre-seu-pet"
+              >Encontre seu pet</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+          <li class="nav-item" id="listItemLogin">
+            <a class="nav-link" href="login.html">
+              Login
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="45"
+                height="30"
+                fill="currentColor"
+                class="bi bi-person-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="container" id="cadastro-pet">
+      <div class="col-md-6" id="texto">
+        <h1>Cadastro de pet</h1>
+        <h2>
+          ONG parceira, cadastre aqui o pet para que ele se conecte a um mundo
+          de afeto!
+        </h2>
+        <h3>
+          O cadastro permite que o pet seja visto em nossa galeria e que os
+          interessados em adotar ou apadrinhar se conectem a ele.
+        </h3>
+      </div>
+      <form class="col-md-6" id="formulario" method="POST">
+        <h1>Formulário de cadastro</h1>
+        <input type="hidden" id="inputOngId" />
+
+        <div class="form-row">
+          <div class="form-group col-lg-6">
+            <label for="inputOng">ONG</label>
+            <input type="text" class="form-control" id="inputOng" disabled />
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="inputPet">Nome do pet</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputPet"
+              placeholder="Nome do Pet"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-lg-6">
+            <label for="inputEspecie">Espécie</label>
+            <select id="inputEspecie" class="form-control" required>
+              <option value="">Selecionar...</option>
+              <option value="cachorro">Cachorro</option>
+              <option value="gato">Gato</option>
+            </select>
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="inputIdade">Idade</label>
+            <input
+              type="number"
+              min="0"
+              class="form-control"
+              id="inputIdade"
+              placeholder="Idade do pet"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-lg-6">
+            <label for="inputPorte">Porte</label>
+            <select id="inputPorte" class="form-control" required>
+              <option value="">Selecionar...</option>
+              <option value="pequeno">Pequeno</option>
+              <option value="medio">Medio</option>
+              <option value="grande">Grande</option>
+            </select>
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="inputCondicaoEspecial">Condição especial</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputCondicaoEspecial"
+              placeholder="Ex: adoção conjunta, FIV+, FeLV+..."
+            />
+          </div>
+        </div>
+        <div class="form-row" id="descricao">
+          <div class="form-group col-md-12">
+            <label for="inputDescricao">Descrição</label>
+            <textarea
+              class="form-control"
+              id="inputDescricao"
+              placeholder="Descreva o pet, para que as pessoas possam conhecê-lo melhor"
+              rows="5"
+            ></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-lg-12">
+            <label for="inputImagem">Imagem</label>
+            <input type="file" name="image" id="inputImagem" required />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mb-5" id="btn-submit">
+          Enviar
+        </button>
+      </form>
+    </section>
+
+    <footer class="container-fluid footer">
+      <div class="row justify-content-center">
+        <div
+          class="col-sm-3 d-flex justify-content-center align-items-center py-2"
+        >
+          <img
+            id="imagem-logo-footer"
+            src="./assets/logo-connectpet.png"
+            alt="logo empresa connect.pet"
+          />
+        </div>
+
+        <div
+          class="col-sm-4 d-flex flex-column justify-content-center align-items-center py-2 rights"
+        >
+          <p class="primeiraFrase">
+            Feito com
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAYAAACZ3F9/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADSSURBVHgBlZG9EYJAEIX358xtwBEyQ+xAS7ATW7ASKYEOoAQCAjIoAXOOdRdxhhFEedG7t/vd3twiqKrDIWDn7mojO4NI4r2/mR3lW81jy8OyrLGHmFNADGAkEanRzEzebTZHx0Snz+Krf5q9c2rbKwnzCVYKRfaksxtYKUF8UAeQwEqRMhQWRaY++5tCjHfKkHnv3EWD+hejT6w9822YChDmeaPBeQk2qNMe7e17cFysoihg71P9sGAJmoBz8Bw0Cw7wVpecmu+cM2jdyuyCb7UnOxpjG+KFihUAAAAASUVORK5CYII="
+              alt="imagem coração"
+              width="13px"
+            />
+            pelo connect.pet
+          </p>
+          <p class="segundaFrase">Todos os direitos reservados.</p>
+        </div>
+
+        <div
+          class="col-sm-3 d-flex justify-content-center align-items-center py-2 footer-redes-sociais"
+        >
+          <ul class="listaRedesSociais d-flex">
+            <li>
+              <a
+                class="footer-a"
+                href="https://www.linkedin.com/home"
+                target="_blank"
+                title="linkedin"
+                rel="noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/200/svg"
+                  width="24"
+                  viewBox="0 0 24 24"
+                  fill="rgb(252, 239, 239)"
+                >
+                  <path
+                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                class="footer-a"
+                href="https://facebook.com/"
+                target="_blank"
+                title="facebook"
+                rel="noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/200/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="rgb(252, 239, 239)"
+                >
+                  <path
+                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                class="footer-a"
+                href="https://twitter.com/"
+                target="_blank"
+                title="twitter"
+                rel="noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/200/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="rgb(252, 239, 239)"
+                >
+                  <path
+                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"
+                  ></path>
+                  >
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                class="footer-a"
+                href="https://www.youtube.com/"
+                target="_blank"
+                title="youtube"
+                rel="noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/200/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="rgb(252, 239, 239)"
+                >
+                  <path
+                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z"
+                  ></path>
+                  >
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                class="footer-a"
+                href="https://instagram.com"
+                target="_blank"
+                title="instagram"
+                rel="noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/200/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="rgb(252, 239, 239)"
+                >
+                  <path
+                    d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z"
+                  ></path>
+                  >
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      function logout() {
+        localStorage.removeItem("idOngAutenticada");
+        localStorage.removeItem("nomeOngAutenticada");
+      }
+
+      if (localStorage.getItem("idOngAutenticada")) {
+        document.getElementById("listItemLogin").innerHTML = `
+        <a class="nav-link" href="index.html" onclick="logout()">
+              Logout
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="45"
+                height="30"
+                fill="currentColor"
+                class="bi bi-person-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                />
+              </svg>
+            </a>
+        `;
+      }
+
+      document.getElementById("inputOng").value =
+        localStorage.getItem("nomeOngAutenticada");
+
+      document.getElementById("inputOngId").value =
+        localStorage.getItem("idOngAutenticada");
+
+      const Table = class {
+        constructor(seed, tablename) {
+          this.localStorage = localStorage;
+          this.tableName = tablename;
+          this.init(seed);
+        }
+        init(seed) {
+          this.table = this.getTable();
+          if (this.table == null) {
+            this.setTable(seed);
+          }
+        }
+        getTable() {
+          return JSON.parse(this.localStorage.getItem(this.tableName));
+        }
+
+        setTable(db) {
+          var dbString = JSON.stringify(db);
+          this.localStorage.setItem(this.tableName, dbString);
+          this.table = this.getTable();
+        }
+
+        findById(id) {
+          //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+          return this.table.pets.find((element) => (element.id = id));
+        }
+        findAll() {
+          return this.table.pets;
+        }
+        insert(pet) {
+          this.table.idAutoIncrement++;
+          pet.id = this.table.idAutoIncrement;
+          this.table.pets.push(pet);
+          this.setTable(this.table);
+          return this.findById(pet.id);
+        }
+      };
+
+      function handleSubmit(event) {
+        //dados do formulario para um objeto json
+        const pet = {
+          nome: event.target.elements["inputPet"].value,
+          especie: event.target.elements["inputEspecie"].value,
+          idade: event.target.elements["inputIdade"].value,
+          porte: event.target.elements["inputPorte"].value,
+          condicao: event.target.elements["inputCondicaoEspecial"].value,
+          descricao: event.target.elements["inputDescricao"].value,
+          foto: event.target.elements["inputImagem"].value.replace(
+            /.*[\/\\]/,
+            ""
+          ),
+          ong: event.target.elements["inputOng"].value,
+          ongId: event.target.elements["inputOngId"].value,
+        };
+
+        const seed = {
+          idAutoIncrement: 8,
+          pets: [
+            {
+              id: 1,
+              nome: "Céu",
+              especie: "Gato",
+              idade: "6",
+              porte: "médio",
+              condicao: "",
+              descricao: "Esperto, brincalhão e serelepe",
+              foto: "foto-gato1.jpg",
+              ong: "ONG Animalar",
+              ongId: "1",
+            },
+            {
+              id: 2,
+              nome: "Cheetos",
+              especie: "Cachorro",
+              idade: "3",
+              porte: "médio",
+              condicao: "Doença do carrapato",
+              descricao: "Esperto, brincalhão e serelepe",
+              foto: "foto-cachorro1.jpg",
+              ong: "SOS Animais",
+              ongId: "1",
+            },
+            {
+              id: 3,
+              nome: "Rock",
+              especie: "Gato",
+              idade: "3",
+              porte: "médio",
+              condicao: "Doença do carrapato",
+              descricao: "Esperto, brincalhão e serelepe",
+              foto: "foto-cachorro2.jpg",
+              ong: "SOS Animais",
+              ongId: "1",
+            },
+            {
+              id: 4,
+              nome: "Lua",
+              especie: "Gato",
+              idade: "3",
+              porte: "médio",
+              condicao: "Doença do carrapato",
+              descricao: "Esperto, brincalhão e serelepe",
+              foto: "foto-gato2.jpg",
+              ong: "ONG Animal",
+              ongId: "1",
+            },
+            {
+              id: 5,
+              nome: "Suflê",
+              especie: "Gato",
+              idade: "3",
+              porte: "médio",
+              condicao: "Doença do carrapato",
+              descricao: "Esperto, brincalhão e serelepe",
+              foto: "foto-gato3.jpg",
+              ong: "SOS Animais",
+              ongId: "2",
+            },
+            {
+              id: 6,
+              nome: "Sashimi",
+              especie: "Gato",
+              idade: "3",
+              porte: "médio",
+              condicao: "Doença do carrapato",
+              descricao: "Esperto, brincalhão e serelepe",
+              foto: "foto-gato4.jpg",
+              ong: "ONG Animal",
+              ongId: "2",
+            },
+            {
+              id: 7,
+              nome: "Fred",
+              especie: "Cachorro",
+              idade: "3",
+              porte: "médio",
+              condicao: "Doença do carrapato",
+              descricao: "Esperto, brincalhão e serelepe",
+              foto: "foto-cachorro3.jpg",
+              ong: "ONG Animal",
+              ongId: "2",
+            },
+            {
+              id: 8,
+              nome: "Billy",
+              especie: "Cachorro",
+              idade: "3",
+              porte: "médio",
+              condicao: "Doença do carrapato",
+              descricao: "Esperto, brincalhão e serelepe",
+              foto: "foto-cachorro4.jpg",
+              ong: "ONG Animalar",
+              ongId: "2",
+            },
+          ],
+        };
+
+        const petsDB = new Table(seed, "basePets");
+        petsDB.insert(pet);
+        alert("Pet cadastrado com sucesso!");
+        window.location.href = "ong.html";
+
+        event.preventDefault();
+      }
+
+      const form = document.getElementById("formulario");
+      form.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
+</html>

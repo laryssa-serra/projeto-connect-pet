@@ -1,0 +1,132 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================== header ======================== */
+
+.bg-light {
+  background-color: #ecfbfd !important;
+}
+
+.navbar navbar-expand-lg navbar-light bg-light {
+  background-color: #ecfbfd;
+  position: sticky;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+.navbar-expand-lg {
+  justify-content: space-between;
+}
+
+.imagem-logo {
+  width: 100px;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #003137;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #003137;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/* ===================== contato ================= */
+
+.texto-entre-em-contato {
+  color: #003137;
+}
+
+.texto-entre-em-contato h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.mudar-cor-letra-p {
+  color: #009dae;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #003137;
+}
+
+.mudar-cor-letra-e {
+  color: #71dfe7;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #003137;
+}
+
+.mudar-cor-letra-t {
+  color: #ffe652;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #003137;
+}
+
+@media (min-width: 576px) {
+  .texto-entre-em-contato h1 {
+    font-weight: bold;
+    font-size: 2.4rem;
+  }
+
+  @media (min-width: 1200px) {
+    .texto-entre-em-contato h1 {
+      font-weight: bold;
+      font-size: 3rem;
+    }
+  }
+
+  .container-contato {
+    margin-bottom: 10px;
+  }
+
+  section {
+
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+
+  /* ================== footer ===================== */
+
+  .footer {
+    background-color: #064f58;
+  }
+
+  .primeiraFrase {
+    font-weight: bold;
+    color: rgb(252, 239, 239);
+  }
+
+  .segundaFrase {
+    color: rgb(252, 239, 239);
+  }
+
+  .listaRedesSociais {
+    list-style: none;
+  }
+
+  .rights p {
+    margin-bottom: 0px;
+  }
+
+  .footer-redes-sociais ul {
+    padding-inline-start: 0px;
+    margin-bottom: 0px;
+  }
+
+  #imagem-logo-footer {
+    width: 70px;
+  }
+
+  .footer-a {
+    padding: 0 10px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .footer {
+      display: flex;
+      align-items: column;
+    }
+  }
+}

@@ -1,0 +1,184 @@
+:root {
+    --main-color: #003137;
+    --h1-color: #003137;
+    --card-color: #ecfbfe;
+}
+
+h1 {
+    color: var(--h1-color);
+    font-size: 50px;
+    text-align: center;
+}
+
+h6 {
+    color: var(--h1-color);
+    font-size: 25px;
+}
+
+.card-button {
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 18px;
+    padding: 9px 4px 9px;
+    
+    
+}
+
+.btn-primary,
+.btn-secondary{
+    width: 193px;
+    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+.btn-outline-primary{
+    background-color: #003137;
+    color: #ecfbfe;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+
+.card {
+    width: 100%;
+    height: 100%;
+    background-color: var(--card-color);
+    border-radius: 20px;
+}
+
+.card-body {
+    background-color: var(--card-color);
+    
+}
+
+
+.card-img-container {
+    padding: 5px 40px 20px 40px;
+}
+
+.card-img-top {
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+.sidebar-img-container {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-img {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar-button {
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+
+.contact-info {
+    margin: 10px 5px 50px 20px;
+}
+
+.contact-info img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.row-cols-md-1 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+span {
+    color: var(--main-color);
+    font-size: 15px;
+}
+
+.col-md-4 {
+    margin-top:5%;
+    margin-bottom: 5%;
+}
+
+
+
+.info-card-img-container {
+    width: 100%;
+    height: 100%;
+}
+
+.info-card-img {
+    width: 100%;
+    height: 100%;
+}
+
+.info-card-title {
+    
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.info-card-button {
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.info-card-info {
+    margin: 10px 5px 50px 20px;
+    text-align: center;
+    width:100%;
+    height:100%;
+}
+
+.info-card-info img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.info-card {
+    display: none;
+    text-align: center;
+}
+
+    
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .info-card {
+        display:block;
+    }
+
+    .info-card-img {
+        width: 50%;
+        height: 50%;
+    }
+    
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  
+  footer {
+    margin-top: auto;
+  }

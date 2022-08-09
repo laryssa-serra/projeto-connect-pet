@@ -1,0 +1,184 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding-bottom: 0px;
+}
+
+/* ================== header ======================== */
+.bg-light {
+  background-color: #ecfbfd !important;
+}
+
+.navbar navbar-expand-lg navbar-light bg-light {
+  background-color: #ecfbfd;
+  position: sticky;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+.navbar-expand-lg {
+  justify-content: space-between;
+}
+
+.imagem-logo {
+  width: 100px;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #003137;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #003137;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/* ===================== formulario ================= */
+.nav-fundo {
+  position: sticky;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+.text-titulo {
+  text-align: justify;
+  font-size: 40px;
+  color: #003137;
+}
+
+.text-subtitulo {
+  text-align: left;
+  font-size: 25px;
+  color: #003137;
+}
+
+.text-paragrafo {
+  text-align: justify;
+  font-size: 16px;
+  margin-right: 25px;
+  margin-left: 0px;
+  color: #003137;
+}
+
+.text-form {
+  text-align: center;
+  color: #003137;
+}
+
+.sub-texto {
+  text-align: center;
+  color: #003137;
+}
+
+.mb-3 {
+  color: #003137;
+}
+
+.btn-primary {
+  background-color: #064f58;
+  border-color: #064f58;
+  width: 120px;
+}
+
+@media (min-width: 576px) {
+  .text-titulo h1 {
+    font-weight: bold;
+    font-size: 2.4rem;
+  }
+}
+
+/* ==================== banner ======================== */
+
+.nav-fundo {
+  position: sticky;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+.text-titulo {
+  text-align: justify;
+  font-size: 40px;
+  color: #003137;
+}
+
+.text-subtitulo {
+  text-align: left;
+  font-size: 25px;
+  color: #003137;
+}
+
+.text-paragrafo {
+  text-align: justify;
+  font-size: 16px;
+  margin-right: 25px;
+  margin-left: 0px;
+  color: #003137;
+}
+
+.text-form {
+  text-align: center;
+  color: #003137;
+}
+
+.sub-texto {
+  text-align: center;
+  color: #003137;
+}
+
+.mb-3 {
+  color: #003137;
+}
+
+.btn-primary {
+  background-color: #064f58;
+  border-color: #064f58;
+  width: 120px;
+}
+
+/* ================== footer ===================== */
+
+.footer {
+  background-color: #064f58;
+}
+
+.primeiraFrase {
+  font-weight: bold;
+  color: rgb(252, 239, 239);
+}
+
+.segundaFrase {
+  color: rgb(252, 239, 239);
+}
+
+.listaRedesSociais {
+  list-style: none;
+}
+
+.rights p {
+  margin-bottom: 0px;
+}
+
+.footer-redes-sociais ul {
+  padding-inline-start: 0px;
+  margin-bottom: 0px;
+}
+
+#imagem-logo-footer {
+  width: 70px;
+}
+
+.footer-a {
+  padding: 0 10px;
+}
+
+@include media-breakpoint-up(sm) {
+  .footer {
+    display: flex;
+    align-items: column;
+  }
+}
