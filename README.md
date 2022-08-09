@@ -10,20 +10,8 @@
 
 `SEMESTRE: 1º`
 
-Com a crescente conscientização das pessoas perante a causa animal, onde existem pessoas interessadas em adotar e/ou ajudar um animal abandonado e muitas ONGs com superlotação de animais, o projeto foi pensado para ser um facilitador e um intermediário entre os adotantes e as ONGs.
-
-## Integrantes
-
-- Angelica Sofia Nieves
-- Laryssa Serra de Oliveira
-- Cássio de Melo Rabelo
-- Paola Andrea Ariza Cordoba
-- Elisângela Dias da Silva
-- Gabriela Farias Rios
-
-## Orientador
-
-- Luciana De Nardin
+O seguinte projeto foi realizado durante o primeiro semestre do curso de Sistemas de Informação. </br>
+Foi idealizada a criação de uma aplicação que auxilie sendo um intermediário entre as ONGs e pessoas que estão interessadas em adotar um animal, apadrinhar ou ajudar com trabalho voluntário. Além também de conter informações sobre o que fazer quando um animal é resgatado, ser possível filtrar ONGs por localização,listagem de animais que estão disponíveis para adoção e apadrinhamentos. 
 
 # Planejamento
 
@@ -34,10 +22,6 @@ Com a crescente conscientização das pessoas perante a causa animal, onde exist
 | ETAPA 3 | 02/05/2022 - 27/05/2022 | [Programação de Funcionalidades - HTML e CSS](docs/development.md)                                           |
 | ETAPA 4 | 30/05/2022 - 24/06/2022 | [Programação de Funcionalidades - Javascript](docs/development.md) <br> [Testes de Software ](docs/tests.md) |
 | ETAPA 5 | 27/06/2022 - 08/07/2022 | [Apresentação](presentation/README.md)                                                                       |
-
-<!-- # Código
-
-<li><a href="src/README.md"> Código Fonte</a></li> -->
 
 # Apresentação
 
